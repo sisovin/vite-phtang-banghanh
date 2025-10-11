@@ -152,21 +152,21 @@ export function TemplateGallery({ onSelectTemplate, onBack }: TemplateGalleryPro
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-card sticky top-0 z-10">
-        <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-8">
+        {/* Page Header */}
+        <div className="mb-8">
+          <div className="flex items-center gap-4 mb-4">
+            <Button variant="ghost" size="sm" onClick={onBack}>
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Dashboard
+            </Button>
+          </div>
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <Button variant="ghost" size="sm" onClick={onBack}>
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Dashboard
-              </Button>
-              <div>
-                <h1 className="text-2xl font-bold">Template Gallery</h1>
-                <p className="text-sm text-muted-foreground">
-                  Choose from {templates.length} professional templates
-                </p>
-              </div>
+            <div>
+              <h1 className="text-3xl font-bold">Template Gallery</h1>
+              <p className="text-muted-foreground mt-1">
+                Choose from {templates.length} professional templates
+              </p>
             </div>
             
             <div className="flex items-center gap-4">
@@ -199,9 +199,7 @@ export function TemplateGallery({ onSelectTemplate, onBack }: TemplateGalleryPro
             </div>
           </div>
         </div>
-      </header>
 
-      <div className="container mx-auto px-6 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Sidebar - Categories */}
           <div className="lg:col-span-1">

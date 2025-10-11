@@ -186,21 +186,21 @@ export function AIContentGenerator({ template, onBack }: AIContentGeneratorProps
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-card sticky top-0 z-10">
-        <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-8">
+        {/* Page Header */}
+        <div className="mb-8">
+          <div className="flex items-center gap-4 mb-4">
+            <Button variant="ghost" size="sm" onClick={onBack}>
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Templates
+            </Button>
+          </div>
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <Button variant="ghost" size="sm" onClick={onBack}>
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Templates
-              </Button>
-              <div>
-                <h1 className="text-2xl font-bold">AI Content Generator</h1>
-                <p className="text-sm text-muted-foreground">
-                  Using template: {template.name}
-                </p>
-              </div>
+            <div>
+              <h1 className="text-3xl font-bold">AI Content Generator</h1>
+              <p className="text-muted-foreground mt-1">
+                Using template: {template.name}
+              </p>
             </div>
             
             <div className="flex items-center gap-3">
@@ -224,7 +224,7 @@ export function AIContentGenerator({ template, onBack }: AIContentGeneratorProps
           </div>
           
           {/* Progress Steps */}
-          <div className="mt-4">
+          <div className="mt-6">
             <div className="flex items-center justify-between">
               {steps.map((step, index) => (
                 <div key={step.id} className="flex items-center">
@@ -253,9 +253,7 @@ export function AIContentGenerator({ template, onBack }: AIContentGeneratorProps
             </div>
           </div>
         </div>
-      </header>
 
-      <div className="container mx-auto px-6 py-8">
         {/* Step 1: Input Details */}
         {currentStep === 1 && (
           <div className="max-w-2xl mx-auto">

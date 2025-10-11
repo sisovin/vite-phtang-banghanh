@@ -88,43 +88,16 @@ export function Dashboard({ onBrowseTemplates, onSelectTemplate }: DashboardProp
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-card">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="bg-primary rounded-lg p-2">
-                <Presentation className="h-6 w-6 text-primary-foreground" />
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold">PhtangBanghanh</h1>
-                <p className="text-sm text-muted-foreground">AI Presentation Generator</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center gap-4">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <Input
-                  placeholder="Search presentations..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 w-64"
-                />
-              </div>
-              <Button onClick={onBrowseTemplates} className="gap-2">
-                <Plus className="h-4 w-4" />
-                New Presentation
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
-
       <div className="container mx-auto px-6 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-3 space-y-8">
+            {/* Welcome Section */}
+            <div className="mb-8">
+              <h1 className="text-3xl font-bold mb-2">Welcome back!</h1>
+              <p className="text-muted-foreground">Continue working on your presentations or create something new.</p>
+            </div>
+
             {/* Quick Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card>
