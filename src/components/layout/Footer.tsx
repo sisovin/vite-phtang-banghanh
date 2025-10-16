@@ -127,9 +127,9 @@ export function Footer() {
 
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Brand Section */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="md:col-span-2 space-y-6">
             <div className="flex items-center gap-3">
               <div className="bg-primary rounded-lg p-2">
                 <Presentation className="h-6 w-6 text-primary-foreground" />
@@ -159,23 +159,23 @@ export function Footer() {
                 </div>
               ))}
             </div>
+          </div>
 
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <h4 className="font-semibold">Contact Us</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <Mail className="h-4 w-4" />
-                  <span>hello@phtangbanghanh.com</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4" />
-                  <span>San Francisco, CA</span>
-                </div>
+          {/* Contact Us Section */}
+          <div className="space-y-4">
+            <h4 className="font-semibold">Contact Us</h4>
+            <div className="space-y-3 text-sm text-muted-foreground">
+              <div className="flex items-start gap-2">
+                <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span className="break-words">hello@phtangbanghanh.com</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <Phone className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span className="break-words">+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span className="break-words">San Francisco, CA</span>
               </div>
             </div>
           </div>
